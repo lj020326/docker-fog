@@ -1,0 +1,3 @@
+[submodule "fogproject"]
+	path = fogproject
+	url = git@github.com:lj020326/fogproject.git
