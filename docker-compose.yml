@@ -12,7 +12,8 @@ services:
     volumes:
       - ./storage/fog/database:/var/lib/mysql
       - ./storage/fog/config/fog.sql:/docker-entrypoint-initdb.d/fog.sql
-  web:
+#  web:
+  fog:
     build:
       context: .
       dockerfile: ./docker/web/Dockerfile
@@ -21,8 +22,8 @@ services:
     links:
       - db
     ports:
-      - "80:80"
-      - "443:443"
+      - "10080:80"
+      - "10443:443"
     tty: true
     volumes:
        - ./storage/fog/images:/images
